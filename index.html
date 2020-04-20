@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marching Cubes</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="js/lib/TriangleTable.js"></script>
+	<script src="js/lib/three.js"></script>
+	<script src="js/lib/three.min.js"></script>
+	<script src="js/lib/FirstPersonControls.js"></script>
+	<script src="js/lib/OrbitControls.js"></script>
+	<script src="js/lib/perlin.js"></script>
+
+	<style type="text/css">
+		body { margin: 0; overflow: hidden; }
+		canvas { 
+			width: 100%; height: 100%;
+			background-color: white;
+		}
+		#hud {
+			position: fixed;
+			right: 0px;
+			top:10vh;
+			overflow: hidden;
+			background-color: white;
+			padding: 20px 5px;
+			border-radius: 5px;
+		}
+		.slider {
+			-webkit-appearance: none;
+			width: 150px;
+			height: 10px;
+			border-radius: 5px;  
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+			float: right;
+		}
+
+		.slider:hover {
+		  opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  appearance: none;
+		  width: 16px;
+		  height: 16px;
+		  background: #039be5;
+			border-radius: 50%;  
+
+		  cursor: pointer;
+		}
+		.sliderDiv label {
+			line-height: 20px;
+			padding: 0px 10px;
+		}
+		.sliderDiv label.value {
+			color: gray;
+			float: right;
+			width: 30px;
+			text-align: right;
+		}
+
+	</style>
+</head>
+<body>
+	<div id='container'></div>
+
+	<div id="hud"></div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
